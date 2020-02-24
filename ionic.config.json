@@ -1,5 +1,7 @@
 {
   "name": "woopera",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

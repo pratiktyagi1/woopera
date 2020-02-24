@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <button ion-button (click)="sendPostRequest()">Post Data</button>
+  <div class="home-wrap">
+    <ion-list class="ios list-ios hydrated">
+      <ion-list-header class="ios hydrated">
+        Recent Conversations
+      </ion-list-header>
+
+      <ion-item class="item ios in-list ion-focusable item-label hydrated">
+        <ion-avatar slot="start" class="ios hydrated">
+          <img src="./avatar-finn.png">
+        </ion-avatar>
+        <div>
+          <ion-label class="list-heading">Opera</ion-label>
+          <ion-select placeholder="Select One">
+            <ion-select-option *ngFor="let item of filterData.opera">{{item.name}}</ion-select-option>
+          </ion-select>            
+        </div>  
+      </ion-item>
+
+      <ion-item class="item ios in-list ion-focusable item-label hydrated">
+        <ion-avatar slot="start" class="ios hydrated">
+          <img src="./avatar-han.png">
+        </ion-avatar>
+        <div>
+          <ion-label class="list-heading">Opera</ion-label>
+          <ion-select placeholder="Select One">
+            <ion-select-option *ngFor="let item of filterData.opera">{{item.name}}</ion-select-option>
+          </ion-select>            
+        </div>
+      </ion-item>
+
+      <ion-item class="item ios in-list ion-focusable item-label hydrated">
+        <ion-avatar slot="start" class="ios hydrated">
+          <img src="./avatar-rey.png">
+        </ion-avatar>
+        <div>
+          <ion-label class="list-heading">Opera</ion-label>
+          <ion-select placeholder="Select One">
+            <ion-select-option *ngFor="let item of filterData.opera">{{item.name}}</ion-select-option>
+          </ion-select>            
+        </div>
+      </ion-item>      
+    </ion-list>
+  </div>
+</ion-content>
