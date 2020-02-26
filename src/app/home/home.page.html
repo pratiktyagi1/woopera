@@ -1,52 +1,58 @@
-<ion-header>
+<!--<ion-header>
   <ion-toolbar>
     <ion-title>home</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content>
-  <button ion-button (click)="sendPostRequest()">Post Data</button>
+  <!--<button ion-button (click)="sendPostRequest()">Post Data</button>-->
   <div class="home-wrap">
-    <ion-list class="ios list-ios hydrated">
-      <ion-list-header class="ios hydrated">
-        Recent Conversations
-      </ion-list-header>
+      <div class="logo">
+        <img src="assets/images/logo-home.png" alt=""/>
+      </div>
 
-      <ion-item class="item ios in-list ion-focusable item-label hydrated">
-        <ion-avatar slot="start" class="ios hydrated">
-          <img src="./avatar-finn.png">
+    <ion-list class="list-transparent">
+      <!--<ion-list-header class="ios hydrated">
+        Recent Conversations
+      </ion-list-header>-->
+
+      <ion-item color="none" lines="none" class="common-list">
+        <ion-avatar  slot="start" class="hydrated">
+          <img src="assets/icon/opera_ico.png" alt=""/>
         </ion-avatar>
-        <div>
+        <div class="inner-common-list">
           <ion-label class="list-heading">Opera</ion-label>
-          <ion-select placeholder="Select One">
+          <ion-select placeholder="Search an Opera" interface="popover">
             <ion-select-option *ngFor="let item of filterData.opera">{{item.name}}</ion-select-option>
           </ion-select>            
         </div>  
       </ion-item>
 
-      <ion-item class="item ios in-list ion-focusable item-label hydrated">
-        <ion-avatar slot="start" class="ios hydrated">
-          <img src="./avatar-han.png">
+
+      <ion-item color="none" lines="none" class="common-list">
+        <ion-avatar slot="start" class="hydrated">
+          <img src="assets/icon/theatre_ico.png">
         </ion-avatar>
-        <div>
-          <ion-label class="list-heading">Opera</ion-label>
-          <ion-select placeholder="Select One">
-            <ion-select-option *ngFor="let item of filterData.opera">{{item.name}}</ion-select-option>
+        <div class="inner-common-list">
+          <ion-label class="list-heading">Theatre</ion-label>
+          <ion-select placeholder="Search Opera Theatre" interface="popover">
+            <ion-select-option *ngFor="let item of filterData.theatre">{{item.name}}</ion-select-option>
           </ion-select>            
         </div>
       </ion-item>
 
-      <ion-item class="item ios in-list ion-focusable item-label hydrated">
-        <ion-avatar slot="start" class="ios hydrated">
-          <img src="./avatar-rey.png">
+      <ion-item color="none" lines="none" class="common-list">
+        <ion-avatar slot="start" class="hydrated">
+          <img src="assets/icon/author_ico.png">
         </ion-avatar>
-        <div>
-          <ion-label class="list-heading">Opera</ion-label>
-          <ion-select placeholder="Select One">
-            <ion-select-option *ngFor="let item of filterData.opera">{{item.name}}</ion-select-option>
+        <div class="inner-common-list">
+          <ion-label class="list-heading">Author</ion-label>
+          <ion-select placeholder="Search an Author" interface="popover">
+            <ion-select-option *ngFor="let item of filterData.author">{{item.name}}</ion-select-option>
           </ion-select>            
         </div>
       </ion-item>      
     </ion-list>
+      <ion-button shape="round" size="large" color="light" fill="outline" class="search-btn">Search</ion-button>
   </div>
 </ion-content>

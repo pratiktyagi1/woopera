@@ -1,8 +1,80 @@
 .home-wrap {
     .list-heading {
         text-transform: uppercase;
+        color:#fff;
     }
+    ion-label{
+        font-size:15px;
+    }
+
     ion-select {
         max-width: 100%!important;
+        color:#fff;
     }
+    .list-transparent{
+        background:transparent !important;
+    }
+    .item-native{
+        background:transparent;
+    }
+    /*.logo{
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }*/
+
+    .common-list {
+        width: 100%;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        background-image: url("../../assets/images/hr.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 120%;
+    }
+
+    .inner-common-list .hydrated {
+        padding-left: 0;
+    }
+
+    ion-avatar.hydrated.md {
+        margin-top: -28px;
+        margin-bottom: 0;
+        vertical-align: top;
+    }
+    .logo {
+        max-width: 220px;
+        margin: 40px auto 70px;
+        filter: drop-shadow(2px 2px 2px black);
+    }
+    .inner-common-list {
+        width: 100%;
+    }
+    ion-avatar.hydrated.md img {
+        border-radius: 0;
+        width: 30px;
+        height: 49px;
+        object-fit: contain;
+    }
+    ion-button.ion-color.ion-color-light.md.button.button-large.hydrated {
+        width: 100%;
+        font-size: 16px;
+        height: 60px;
+    }
+    ion-list.list-transparent.md.list-md.hydrated {
+        padding-bottom: 20px;
+    }
+
+    .search-btn{
+        --border-width:1px;
+    }
+
+    background-image: url("../../assets/images/home-bg.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:100%;
+    padding: 30px 30px;
 }
+
+
+
+

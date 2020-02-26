@@ -16,7 +16,7 @@ export class HomePage implements OnInit {
     // tslint:disable-next-line: variable-name
     this.homeService.getHomeFilterData().subscribe((data) => {
       this.filterData = data;
-      console.log(this.filterData.opera)
+      console.log(this.filterData.opera);
       // this.opera = data.opera;
     });
   }
