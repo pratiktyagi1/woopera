@@ -10,4 +10,7 @@ export class HomeService {
     return this.httpClient.get('http://woopera.quintsofts.com/api/getoperas/en');
     // throw new Error("Method not implemented.");
   }
+  public getSingleOperaById(operaId) {
+    return this.httpClient.get('http://woopera.quintsofts.com/api/getoperas/en/' + operaId);
+  }
 }

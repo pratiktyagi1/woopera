@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../api/home.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,10 @@ import { HomeService } from '../api/home.service';
 export class HomePage implements OnInit {
 
   filterData: any = {};
-  opera: any[] = [];
+
+  operaId: any[] = [];
+  theatreId: any[] = [];
+  authorId: any[] = [];
   constructor(public homeService: HomeService) {}
 
   ngOnInit() {
@@ -19,6 +23,20 @@ export class HomePage implements OnInit {
       console.log(this.filterData.opera);
       // this.opera = data.opera;
     });
+  }
+
+  onSelectChange(selectedValue: any) {
+    console.log('Selected', selectedValue);
+  }
+
+  onClickSubmit(formData) {
+    console.log(formData);
+    if (formData.opera_id) {
+      this.homeService.getSingleOperaById(formData.opera_id).subscribe((data) => {
+        this.filterData = data;
+        console.log(this.filterData);
+      });
+    }
   }
 
 }

@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },  {
+    path: 'opera',
+    loadChildren: () => import('./pages/opera/opera.module').then( m => m.OperaPageModule)
   }
+
 ];
 
 @NgModule({
