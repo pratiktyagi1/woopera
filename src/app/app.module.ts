@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { OperaPageModule } from "./pages/opera/opera.module";
 
+import { HeaderComponent } from './components/header/header.component';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -27,6 +29,7 @@ import { OperaPageModule } from "./pages/opera/opera.module";
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [HeaderComponent]
 })
 export class AppModule {}
