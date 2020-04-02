@@ -4,19 +4,21 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { OperaPageRoutingModule } from './opera-routing.module';
+import { LibrettosPageRoutingModule } from './librettos-routing.module';
 
-import { OperaPage } from './opera.page';
+import { LibrettosPage } from './librettos.page';
 import { HeaderComponent } from '../../components/header/header.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OperaPageRoutingModule
+    LibrettosPageRoutingModule
+    
   ],
-  declarations: [OperaPage,HeaderComponent],
+  declarations: [LibrettosPage],
   exports:[HeaderComponent]
 })
-export class OperaPageModule {}
+export class LibrettosPageModule {}

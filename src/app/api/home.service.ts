@@ -13,4 +13,7 @@ export class HomeService {
   public getSingleOperaById(operaId) {
     return this.httpClient.get('http://woopera.quintsofts.com/api/getoperas/en/' + operaId);
   }
+  public getLibrettoByOpera(operaId) {
+    return this.httpClient.get('http://woopera.quintsofts.com/api/getlibretto/en/' + operaId);
+  }
 }

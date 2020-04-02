@@ -13,11 +13,16 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },  {
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
     path: 'opera',
     loadChildren: () => import('./pages/opera/opera.module').then( m => m.OperaPageModule)
+  },  {
+    path: 'librettos',
+    loadChildren: () => import('./pages/librettos/librettos.module').then( m => m.LibrettosPageModule)
   }
+
 
 ];
 

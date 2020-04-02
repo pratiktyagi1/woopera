@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '../api/home.service';
+import { HomeService } from '../../api/home.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +14,7 @@ export class HomePage implements OnInit {
   operaId: any[] = [];
   theatreId: any[] = [];
   authorId: any[] = [];
-  constructor(public homeService: HomeService) {}
+  constructor(public homeService: HomeService, private router: Router) {}
 
   ngOnInit() {
     // tslint:disable-next-line: variable-name
@@ -26,16 +26,20 @@ export class HomePage implements OnInit {
   }
 
   onSelectChange(selectedValue: any) {
-    console.log('Selected', selectedValue);
+   // console.log(selectedValue);
+    // console.log('Selected', selectedValue.detail.value);
   }
 
   onClickSubmit(formData) {
-    console.log(formData);
+    // console.log(formData.opera_id);
     if (formData.opera_id) {
       this.homeService.getSingleOperaById(formData.opera_id).subscribe((data) => {
         this.filterData = data;
-        console.log(this.filterData);
+       // console.log(this.filterData);
+        this.router.navigate(['/opera', {opera_id: formData.opera_id}]);
       });
+    } else {
+      console.log('blank');
     }
   }
 

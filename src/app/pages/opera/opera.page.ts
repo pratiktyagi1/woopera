@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-opera',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./opera.page.scss'],
 })
 export class OperaPage implements OnInit {
-
-  constructor() { }
+  public operaId: string;
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.operaId = this.activatedRoute.snapshot.paramMap.get('opera_id');
+    if (this.operaId) {
+      console.log(this.operaId);
+    } else {
+      console.log('no Oprea');
+    }
   }
 
 }

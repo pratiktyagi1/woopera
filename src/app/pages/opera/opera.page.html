@@ -1,9 +1,79 @@
-<ion-header>
+<!--<ion-header>
+  <ion-col class="headerbg"><img src="assets/images/header.png" alt=""/></ion-col>
+  <ion-col class="headerimgs">
+    <ion-col class="backlogo">
+      <img src="assets/icon/back.png" alt=""/>
+      <img src="assets/icon/toolbar.png" alt=""/>
+    </ion-col>
+    <ion-col class="centerlogo">
+      <img src="assets/images/logo.png" alt=""/>
+    </ion-col>
+    <ion-col class="rightdots">
+      <img src="assets/icon/dots.png" alt=""/>
+    </ion-col>
+  </ion-col>
   <ion-toolbar>
-    <ion-title>opera</ion-title>
+    <ion-title>
+      <ion-col class="rightcnn">
+        <img src="assets/images/cnn.png" alt=""/>
+      </ion-col>
+   </ion-title>
   </ion-toolbar>
-</ion-header>
+
+</ion-header>-->
+<app-header></app-header>
 
 <ion-content>
 
+  <ion-grid>
+    <ion-row class="ion-align-items-center grid-row-border-bottom">
+
+      <ion-col class="ion-align-items-center grid-align-center grid-col-right-border">
+        <a [routerLink]="['/librettos', {opera_id: operaId}]">
+        <img src="assets/icon/libretto.png" alt=""/>
+        <ion-label class="opera-item-label">Libretto</ion-label>
+        </a>
+      </ion-col>
+
+      <ion-col class="ion-align-items-center grid-align-center">
+        <img src="assets/icon/audio.png" alt=""/>
+        <ion-label class="opera-item-label">Audio Guide</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-align-items-center grid-row-border-bottom">
+      <ion-col class="ion-align-items-center grid-align-center grid-col-right-border">
+        <img src="assets/icon/author.png" alt=""/>
+        <ion-label class="opera-item-label">Author</ion-label>
+      </ion-col>
+      <ion-col class="ion-align-items-center grid-align-center">
+        <img src="assets/icon/plot.png" alt=""/>
+        <ion-label class="opera-item-label">Plot</ion-label>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row class="ion-align-items-center grid-row-border-bottom">
+      <ion-col class="ion-align-items-center grid-align-center grid-col-right-border">
+        <img src="assets/icon/characters.png" alt=""/>
+        <ion-label class="opera-item-label">Characters</ion-label>
+      </ion-col>
+      <ion-col class="ion-align-items-center grid-align-center">
+        <img src="assets/icon/context.png" alt=""/>
+        <ion-label class="opera-item-label">Context</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-align-items-center grid-row-border-bottom">
+      <ion-col class="ion-align-items-center grid-align-center grid-col-right-border">
+        <img src="assets/icon/performance.png" alt=""/>
+        <ion-label class="opera-item-label">Performances</ion-label>
+      </ion-col>
+      <ion-col class="ion-align-items-center grid-align-center">
+        <img src="assets/icon/others.png" alt=""/>
+        <ion-label class="opera-item-label">Others</ion-label>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
